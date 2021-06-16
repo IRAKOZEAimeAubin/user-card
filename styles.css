@@ -19,6 +19,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     position: relative;
 }
 
@@ -28,6 +29,7 @@ section{
     background: #ffffff;
     overflow: hidden;
     text-align: center;
+    position: relative;
 }
 
 .card-header{
@@ -101,4 +103,33 @@ section{
     letter-spacing: 1px;
 }
 
+/* Background circles */
 
+.circles .circle1,
+.circles .circle2{
+    position: absolute;
+    animation: 2s circles forwards;
+    opacity: 0;
+}
+
+.circles .circle1{
+    top: -600px;
+    left: -300px;
+    transform: translate(-100px, -50px);
+}
+
+.circles .circle2{
+    bottom: -600px;
+    right: -300px;
+    transform: translate(100px, 50px);
+}
+
+@keyframes circles{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
